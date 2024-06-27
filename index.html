@@ -1,0 +1,268 @@
+<!-- 
+ 0- Responsiive navbar
+ 1- Main content and image part
+ 2- About section
+ 3- Skills
+ 4- Projects
+ 5- Footer
+-->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+              'sm': '340px',
+              // => @media (min-width: 640px) { ... }
+        
+              'md': '723px',
+              // => @media (min-width: 768px) { ... }
+        
+              'lg': '1024px',
+              // => @media (min-width: 1024px) { ... }
+        
+              'xl': '1280px',
+              // => @media (min-width: 1280px) { ... }
+        
+              '2xl': '1536px',
+              // => @media (min-width: 1536px) { ... }
+            },
+          extend: {
+              screens: {
+                  'xs': {'min':'320px', 'max':'1171px'},
+                  // => @media (min-width: 992px) { ... }
+                  'xm': {'min':'320px', 'max':'1300px'},
+                  // => @media (min-width: 992px) { ... }
+                },
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+
+<body class="font-[Poppins] h-screen bg-gray-500">
+
+    <!-- 0- Responsive navbar start -->
+
+    <header class="bg-gray-600">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto bg-gray-600 py-4">
+            <div>
+                <img class="w-16 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png" alt="...">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-gray-600 md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 bg-gray-600">
+                    <li>
+                        <a class="text-white hover:text-green-200 " href="#">Products</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-green-200 text-white" href="#">Solution</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-green-200 text-white" href="#">Resource</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-green-200 text-white" href="#">Developers</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-green-200 text-white" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="bg-green-300 text-white px-5 py-2 rounded-full hover:bg-green-400">Sign in</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+
+    <!-- Responsive navbar end -->
+
+    <!-- 1- Main image and content section start -->
+
+  <div class="max-w-[full] mx-auto flex lg:flex-row xs:flex-col xs:text-center bg-gray-500 py-8 xm:flex-col flex-row">
+      <div class="basis-[50%] py-9 pl-8">
+          <h1 class="text-5xl font-bold pb-5 mt-5 leading-[50px]">Hafiz Muhammad  Abdullah</h1>
+          <h2 class="pb-6 text-3xl leading-[50px]">I am a <span class="text-green-500">front-end developer. </span>I have completed my web development course from <span class="text-[#0ef]">Tecnsol</span> Institute in Faislabad. </h2>
+          <div class="pb-6 flex leading-[50px] xs:hidden">
+            <div class="border-4 flex cursor-pointer border-black rounded-[50%] p-1 mx-1 text-2xl hover:border-blue-600 hover:text-white hover:bg-blue-600"><i class='bx bxl-facebook'></i></div>
+            <div class="border-4 flex cursor-pointer border-black rounded-[50%] p-1 mx-1 text-2xl hover:border-sky-500 hover:text-white hover:bg-sky-500"><i class='bx bxl-twitter' ></i></div>
+            <div class="border-4 flex cursor-pointer border-black rounded-[50%] p-1 mx-1 text-2xl hover:border-yellow-300 hover:text-white hover:bg-gradient-to-t from-[yellow] to-[pink]"><i class='bx bxl-instagram' ></i></div>
+            <div class="border-4 flex cursor-pointer border-black rounded-[50%] p-1 mx-1 text-2xl hover:border-blue-600 hover:text-white hover:bg-blue-600"><i class='bx bxl-linkedin' ></i></div>
+          </div>
+          <button class="pb-6 bg-black text-white flex items-center px-5 pt-5 justify-center rounded-lg xs:mx-auto hover:bg-gray-700 duration-500">Download CV</button>
+      </div>
+      <div class="py-0 basis-[50%] text-center flex items-center justify-center">
+          <img src="img/ei_1699205407778-removebg-preview.png" class="pb-2" alt="">
+      </div>
+  </div>
+
+    <!-- Main image and content section end -->
+
+    <!-- About us section start -->
+
+    <div class="max-w-[full] mx-auto flex lg:flex-row xs:flex-col xs:text-center bg-gray-500 py-8">
+      <div class="py-0 basis-[50%] text-center flex items-center justify-center xs:hidden">
+        <img src="img/ei_1699205407778-removebg-preview.png" class="pb-2" alt="">
+      </div>
+      <div class="basis-[50%] py-9 pl-8 pr-5">
+          <h1 class="text-5xl font-bold pb-5 pt-8 mt-5 leading-[50px]">About Me</h1>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, enim?</p>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+      </div>
+  </div>
+
+    <!-- About us section end -->
+
+    <!-- 2- Skills section start -->
+
+        <div class="w-[100%]  text-center py-6 bg-gray-500">
+            <h1 class=" text-5xl font-bold">Skills</h1>
+        </div>
+        <div class="grid lg:grid-cols-3 xm:block flex mx-auto px-9 text-center py-9 bg-gray-500 w-fit gap-6">
+            <div class="w-[400px] shadow  min-h-[250px] bg-gray-400 flex flex-col justify-between py-5 px-5 xm:w-[100%] mb-9 rounded hover:border-4 border-green-500 duration-500">
+              <i class='bx bxl-typescript text-6xl'></i>
+              <h1 class="text-4xl py-4">HTML5</h1>
+              <p class="xm:mb-6 mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At porro, tenetur ab error hic est cum asperiores minima.</p>
+              <button class="bg-green-400 px-5 py-2 rounded cursor-pointer font-semibold hover:bg-green-500 text-white">Read More</button>
+            </div>
+            <div class="w-[400px] shadow min-h-[250px] bg-gray-400 flex flex-col justify-between py-5 px-5 xm:w-[100%] mb-9 rounded hover:border-4 border-green-500 duration-500">
+              <i class='bx bxl-typescript text-6xl'></i>
+              <h1 class="text-4xl py-4">Tailwind CSS</h1>
+              <p class="xm:mb-6 mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At porro, tenetur ab error hic est cum asperiores minima.</p>
+              <button class="bg-green-400 px-5 py-2 rounded cursor-pointer font-semibold hover:bg-green-500 text-white">Read More</button>
+            </div>
+            <div class="w-[400px] shadow min-h-[250px] bg-gray-400 flex flex-col justify-between py-5 px-5 xm:w-[100%] mb-9 rounded hover:border-4 border-green-500 duration-500">
+              <i class='bx bxl-typescript text-6xl'></i>
+              <h1 class="text-4xl py-4">JavaScript</h1>
+              <p class="xm:mb-6 mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At porro, tenetur ab error hic est cum asperiores minima.</p>
+              <button class="bg-green-400 px-5 py-2 rounded cursor-pointer font-semibold hover:bg-green-500 text-white">Read More</button>
+            </div>
+
+            <div class="w-[400px] shadow  min-h-[250px] bg-gray-400 flex flex-col justify-between py-5 px-5 xm:w-[100%] rounded mb-9 hover:border-4 border-green-500 duration-500">
+              <i class='bx bxl-typescript text-6xl'></i>
+              <h1 class="text-4xl py-4">React Js</h1>
+              <p class="xm:mb-6 mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At porro, tenetur ab error hic est cum asperiores minima.</p>
+              <button class="bg-green-400 px-5 py-2 rounded cursor-pointer font-semibold hover:bg-green-500 text-white">Read More</button>
+            </div>
+            <div class="w-[400px] shadow min-h-[250px] bg-gray-400 flex flex-col justify-between py-5 px-5 xm:w-[100%] rounded mb-9 hover:border-4 border-green-500 duration-500">
+              <i class='bx bxl-typescript text-6xl'></i>
+              <h1 class="text-4xl py-4">Git & Github</h1>
+              <p class="xm:mb-6 mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At porro, tenetur ab error hic est cum asperiores minima.</p>
+              <button class="bg-green-400 px-5 py-2 rounded cursor-pointer font-semibold hover:bg-green-500 text-white">Read More</button>
+            </div>
+            <div class="w-[400px] shadow min-h-[250px] bg-gray-400 flex flex-col justify-between py-5 px-5 xm:w-[100%] rounded mb-9 hover:border-4 border-green-500 duration-500">
+              <i class='bx bxl-typescript text-6xl'></i>
+              <h1 class="text-4xl py-4">Python</h1>
+              <p class="xm:mb-6 mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At porro, tenetur ab error hic est cum asperiores minima.</p>
+              <button class="bg-green-400 px-5 py-2 rounded cursor-pointer font-semibold hover:bg-green-500 text-white">Read More</button>
+            </div>
+        </div>
+
+    <!-- Skills section end -->
+
+    <!-- Projects section start -->
+
+    <div class="w-[100%]  text-center py-6 bg-gray-500">
+      <h1 class=" text-5xl font-bold">Our Projects</h1>
+    </div>
+
+    <!-- Project 1 -->
+
+    <div class="max-w-[full] mx-auto flex lg:flex-row xs:flex-col xs:text-center bg-gray-500 py-8">
+      <div class="py-0 basis-[50%] text-center flex items-center justify-center">
+        <div class="overflow-hidden">
+          <img src="https://magesolution.com/wp-content/uploads/2022/07/ecommerce-website-design-examples-1024x768.jpg" width="500px" height="500px" class="pb-2 rounded-lg w-[450px] h-[400px] hover:scale-125 duration-500" alt=""  >
+        </div>
+      </div>
+      <div class="basis-[50%] py-9 pl-8 pr-5">
+          <h1 class="text-4xl font-bold pb-5 pt-8 mt-5 leading-[50px]">E-commerce Wesite</h1>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, enim?</p>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+
+    <div class="max-w-[full] mx-auto flex lg:flex-row xs:flex-col-reverse xs:text-center bg-gray-500 py-8">
+      <div class="basis-[50%] py-9 pl-8 pr-5 ">
+        <h1 class="text-4xl font-bold pb-5 pt-8 mt-5 leading-[50px]">Crypt-based Site</h1>
+        <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, enim?</p>
+        <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+        <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+      </div>
+      <div class="py-0 basis-[50%] text-center flex items-center justify-center">
+        <div class="overflow-hidden">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn5UI6PGsgl3nj4vueoqMCfuWsl0Gyy54AUA&s" width="500px" height="500px" class="pb-2 rounded-lg w-[450px] h-[400px] hover:scale-125 duration-500" alt="" >
+        </div>
+      </div>
+    </div>
+
+  <!-- Project 3 -->
+
+    <div class="max-w-[full] mx-auto flex lg:flex-row xs:flex-col xs:text-center bg-gray-500 py-8">
+      <div class="py-0 basis-[50%] text-center flex items-center justify-center">
+        <div class="overflow-hidden">
+          <img src="https://uploads.sitepoint.com/wp-content/uploads/2023/03/1679990016build-php-login-form.jpg" width="500px" height="500px" class="pb-2 rounded-lg w-[450px] h-[400px] hover:scale-125 duration-500" alt="" >
+        </div>
+      </div>
+      <div class="basis-[50%] py-9 pl-8 pr-5">
+          <h1 class="text-4xl font-bold pb-5 pt-8 mt-5 leading-[50px]">Advance Login System</h1>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, enim?</p>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+
+    <div class="max-w-[full] mx-auto flex lg:flex-row xs:flex-col-reverse xs:text-center bg-gray-500 py-8">
+      <div class="basis-[50%] py-9 pl-8 pr-5">
+          <h1 class="text-4xl font-bold pb-5 pt-8 mt-5 leading-[50px]">Learning Management System</h1>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, enim?</p>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+          <p class="pb-7 pt-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius maxime voluptatum officia nemo voluptatem, eaque rerum accusamus numquam magni illo qui perspiciatis tempora quas, autem cupiditate asperiores consectetur sit.</p>
+      </div>
+      <div class="py-0 basis-[50%] text-center flex items-center justify-center">
+        <div class="overflow-hidden">
+          <img src="https://www.foxizecloud.com/wp-content/uploads/2023/09/Captura-de-pantalla-2023-09-19-a-las-11.36.43.png" class="pb-2 rounded-lg w-[450px] h-[400px] hover:scale-125 duration-500" alt="" width="500px" height="500px" >
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects section end -->
+
+    <!-- Footer section start -->
+
+    
+
+    <!-- Footer section end -->
+
+</body>
+
+</html>
